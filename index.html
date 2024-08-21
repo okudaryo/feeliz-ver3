@@ -10,20 +10,22 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background-color: #fff; /* 背景を白に設定 */
             overflow-x: hidden;
         }
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(72, 169, 166, 0.8);
-            color: white;
+            background: rgba(255, 255, 255, 0.8); /* 白色で半透明 */
+            color: #333; /* 文字色を濃いグレーに変更 */
             padding: 10px 0;
             text-align: left;
             z-index: 1000;
             display: flex;
             align-items: center;
             padding-left: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 少し影をつける */
         }
         .logo {
             width: 50px;
@@ -41,13 +43,13 @@
             gap: 20px;
         }
         nav a {
-            color: white;
+            color: #333; /* リンクの色も濃いグレーに変更 */
             text-decoration: none;
             font-size: 1.2em;
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #ffcc00;
+            color: #666; /* ホバー時の色を少し濃く */
         }
         section {
             padding: 100px 20px;
@@ -67,18 +69,18 @@
         }
         #hero {
             background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
-            color: white;
+            color: #333; /* 文字色を濃いグレーに */
             padding-top: 150px;
             padding-bottom: 100px;
         }
         #about {
-            background-color: #f4f4f4;
+            background-color: #f9f9f9; /* 背景色を非常に薄いグレーに */
         }
         #services {
             background-color: #fff;
         }
         #employment {
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
         }
         #contact {
             background-color: #fff;
@@ -89,9 +91,10 @@
             margin: 10px 0;
             border-radius: 5px;
             border: 1px solid #ccc;
+            background-color: #fff;
         }
         input[type="submit"] {
-            background-color: #48a9a6;
+            background-color: #333; /* ボタンの背景色を濃いグレーに */
             color: white;
             border: none;
             padding: 15px 20px;
@@ -100,11 +103,11 @@
             transition: background-color 0.3s;
         }
         input[type="submit"]:hover {
-            background-color: #3e8a82;
+            background-color: #666; /* ホバー時の色を少し薄く */
         }
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #f9f9f9; /* 背景色を非常に薄いグレーに */
+            color: #333; /* 文字色を濃いグレーに */
             text-align: center;
             padding: 20px 0;
         }

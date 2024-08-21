@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地域密着型薬局 - 健康サポートと利便性</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(72, 169, 166, 0.8);
+            color: white;
+            padding: 10px 0;
+            text-align: left;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 15px;
+        }
+        .company-name {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        nav {
+            margin-left: auto;
+            margin-right: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #hero {
+            background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+            color: white;
+            padding-top: 150px;
+            padding-bottom: 100px;
+        }
+        #about {
+            background-color: #f4f4f4;
+        }
+        #services {
+            background-color: #fff;
+        }
+        #employment {
+            background-color: #f4f4f4;
+        }
+        #contact {
+            background-color: #fff;
+        }
+        textarea, input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #48a9a6;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #3e8a82;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="path-to-your-logo.png" alt="フィーリス薬局ロゴ" class="logo">
+        <div class="company-name">フィーリス薬局</div>
+        <nav>
+            <a href="#about">私たちについて</a>
+            <a href="#services">サービス</a>
+            <a href="#employment">雇用情報</a>
+            <a href="#contact">お問い合わせ</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>地域密着型薬局</h1>
+        <p>地域の健康サポートと利便性を提供します</p>
+    </section>
+
+    <section id="about">
+        <h2>私たちについて</h2>
+        <p>地域住民がいつでも気軽に立ち寄れる場所を提供し、コンビニのような便利さを目指しています。</p>
+    </section>
+
+    <section id="services">
+        <h2>サービス</h2>
+        <p>健康相談、処方薬の提供、健康関連製品の販売、地域イベントの開催など、多岐にわたるサービスを提供しています。</p>
+    </section>
+
+    <section id="employment">
+        <h2>雇用情報</h2>
+        <p>私たちと一緒に、地域の健康をサポートしませんか？若者の活躍を推進し、利益連動型インセンティブを導入して、全員が経営者として成長できる環境を整えています。</p>
+        <textarea placeholder="あなたの考えや意見をお聞かせください..."></textarea>
+    </section>
+
+    <section id="contact">
+        <h2>お問い合わせ</h2>
+        <p>興味のある方は、下記フォームよりお問い合わせください。</p>
+        <form action="/submit" method="post">
+            <input type="text" id="name" name="name" placeholder="名前" required><br>
+            <input type="email" id="email" name="email" placeholder="メールアドレス" required><br>
+            <textarea id="message" name="message" placeholder="メッセージ" required></textarea><br>
+            <input type="submit" value="送信">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 地域密着型薬局. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const scrollPos = window.scrollY + window.innerHeight;
+
+            sections.forEach(section => {
+                if (scrollPos > section.offsetTop) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                window.scrollTo({
+                    top: target.offsetTop - 50,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

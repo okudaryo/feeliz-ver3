@@ -5,27 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>地域密着型薬局 - 健康サポートと利便性</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Open Sans', Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #fff; /* 背景を白に設定 */
+            background-color: #fff;
             overflow-x: hidden;
         }
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.8); /* 白色で半透明 */
-            color: #333; /* 文字色を濃いグレーに変更 */
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
             padding: 10px 0;
             text-align: left;
             z-index: 1000;
             display: flex;
             align-items: center;
             padding-left: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 少し影をつける */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .logo {
             width: 50px;
@@ -43,13 +45,13 @@
             gap: 20px;
         }
         nav a {
-            color: #333; /* リンクの色も濃いグレーに変更 */
+            color: #333;
             text-decoration: none;
             font-size: 1.2em;
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #666; /* ホバー時の色を少し濃く */
+            color: #666;
         }
         section {
             padding: 100px 20px;
@@ -69,21 +71,53 @@
         }
         #hero {
             background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
-            color: #333; /* 文字色を濃いグレーに */
+            color: #333;
             padding-top: 150px;
             padding-bottom: 100px;
         }
-        #about {
-            background-color: #f9f9f9; /* 背景色を非常に薄いグレーに */
+        #hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            font-weight: 700;
+            margin: 0;
         }
-        #services {
-            background-color: #fff;
+        #hero p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.5em;
+            margin: 10px 0 20px;
         }
-        #employment {
+        #hero .subtitle {
+            font-family: 'Lora', serif;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        #about, #services, #employment {
             background-color: #f9f9f9;
+            padding: 60px 20px;
+        }
+        #about h2, #services h2, #employment h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        #about p, #services p, #employment p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2em;
+            line-height: 1.6;
         }
         #contact {
             background-color: #fff;
+            padding: 60px 20px;
+        }
+        #contact h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        #contact p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2em;
+            margin-bottom: 20px;
         }
         textarea, input[type="text"], input[type="email"] {
             width: 100%;
@@ -94,7 +128,7 @@
             background-color: #fff;
         }
         input[type="submit"] {
-            background-color: #333; /* ボタンの背景色を濃いグレーに */
+            background-color: #333;
             color: white;
             border: none;
             padding: 15px 20px;
@@ -103,11 +137,11 @@
             transition: background-color 0.3s;
         }
         input[type="submit"]:hover {
-            background-color: #666; /* ホバー時の色を少し薄く */
+            background-color: #666;
         }
         footer {
-            background-color: #f9f9f9; /* 背景色を非常に薄いグレーに */
-            color: #333; /* 文字色を濃いグレーに */
+            background-color: #f9f9f9;
+            color: #333;
             text-align: center;
             padding: 20px 0;
         }
@@ -126,9 +160,9 @@
     </header>
 
     <section id="hero">
-        <h1>Make our happy</h1>
-        <p>すべての人をハッピーに</p>
-        <p>フィーリス薬局は、地域の皆様に信頼されるかかりつけ薬局を目指しています。</p>
+        <h1>地域密着型薬局</h1>
+        <p>地域の健康サポートと利便性を提供します</p>
+        <p class="subtitle">フィーリス薬局は、地域の皆様に信頼されるかかりつけ薬局を目指します。</p>
     </section>
 
     <section id="about">

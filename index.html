@@ -164,8 +164,10 @@
             const scrollPos = window.scrollY + window.innerHeight;
 
             sections.forEach(section => {
-                if (scrollPos > section.offsetTop) {
+                if (scrollPos > section.offsetTop + 50) {
                     section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
                 }
             });
         });
